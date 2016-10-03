@@ -32,3 +32,6 @@ php composer.phar require phpunit/phpunit
 Run tests:
 
 php vendor/bin/phpunit
+
+
+Note: Assume that composer.phar installed globally.

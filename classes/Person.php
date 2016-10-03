@@ -1,23 +1,23 @@
 <?php
-namespace apache;
+namespace phpUnitTesting;
 
-class person {
-
+class person
+{
 	public $name;
 	public $age;
 
-	public function __construct ($name, $age)
+	public function __construct($name, $age)
 	{
 		$this->name = $name;
 		$this->age = $age;
 	}
 
-	public function setName ($name)
+	public function setName($name)
 	{
 		$this->name = $name;
 	}
 
-	public function getName ()
+	public function getName()
 	{
 		return $this->name;
 	}

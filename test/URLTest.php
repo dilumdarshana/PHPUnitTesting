@@ -1,23 +1,23 @@
 <?php
-namespace apache\Test;
+namespace phpUnitTesting\Test;
 
-use apache\URL;
+use phpUnitTesting\URL;
 
-require_once ('URL.php');
+require_once ('classes/URL.php');
 
 class URLTest extends \PHPUnit_Framework_TestCase
 {
 
-	public function testSluggify ()
+	public function testSluggify()
 	{
 		$originalString = 'This string will be sluggified';
         $expectedResult = 'this-string-will-be-sluggified';
 
-        $url = new URL ();
+        $url = new URL();
 
-        $res = $url->sluggify ($expectedResult);
+        $res = $url->sluggify($expectedResult);
 
-        $this->assertEquals ($expectedResult, $res);
+        $this->assertEquals($expectedResult, $res);
 
     }
 

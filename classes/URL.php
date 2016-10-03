@@ -1,10 +1,9 @@
 <?php
-
-namespace apache;
+namespace phpUnitTesting;
 
 class URL
 {
-    public function sluggify ($string, $separator = '-', $maxLength = 96)
+    public function sluggify($string, $separator = '-', $maxLength = 96)
     {
         $title = iconv('UTF-8', 'ASCII//TRANSLIT', $string);
         $title = preg_replace("%[^-/+|\w ]%", '', $title);

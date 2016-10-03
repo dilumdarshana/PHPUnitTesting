@@ -1,39 +1,39 @@
 <?php
+namespace phpUnitTesting\PersonTest;
 
-namespace apache\PersonTest;
+use phpUnitTesting\Person;
+use PHPUnit\Framework\TestCase;
 
-use apache\Person;
+require_once('classes/Person.php');
 
-require_once ('Person.php');
-
-class PersonTest extends \PHPUnit_Framework_TestCase {
-
+class PersonTest extends TestCase
+{
 	public $person;
 
-	protected function setup ()
+	protected function setup()
 	{
-		$this->person = new Person ('Apache', '34');
+		$this->person = new Person('Apache', '34');
 	}
 
-	public function testSetName ()
+	public function testSetName()
 	{
-		$this->person->setName ('Linux');
+		$this->person->setName('Linux');
 
-		$name = $this->person->getName ();
+		$name = $this->person->getName();
 
-		$this->assertEquals ($name, 'Linux');
+		$this->assertEquals($name, 'Linux');
 	}
 
-	public function testGetName ()
+	public function testGetName()
 	{
-		$name = $this->person->getName ();
+		$name = $this->person->getName();
 
-		$this->assertEquals ($name, 'Apache');
+		$this->assertEquals($name, 'Apache');
 	}
 
 	// will call this as soon as complete all tests
-	protected function tearDown ()
+	protected function tearDown()
 	{
-
+		//echo 'After successs';
 	}
 }
