@@ -21,7 +21,7 @@ class PersonTest extends TestCase
 
 		$name = $this->person->getName();
 
-		$this->assertEquals($name, 'Linux');
+		$this->assertEquals($name, 'Linux', 'Some comment');
 	}
 
 	public function testGetName()
